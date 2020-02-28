@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  minecraft:
+    build: ./Dockerfile
+    container_name: mcmc
+    environment:
+      server.public.port: 25566
+      server.hostname: ${SERVER_HOSTNAME}
+    ports:
+      - "25566:25566"
+    network_mode: "bridge"
+    tty: true
+    stdin_open: true
+    restart: always
+    volumes:
+      - ./world:/world/
+
+  haproxy:
+    build: ./haproxy
+    container_name: haproxy
+    links:
+      - minecraft
+    ports:
+      - "36543:36543"
+    network_mode: "bridge"
+    tty: true 
+    stdin_open: true
+    depends_on:
+      - minecraft
+    restart: unless-stopped
