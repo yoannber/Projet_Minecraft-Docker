@@ -1,6 +1,6 @@
 
--
+- MINECRAFT:
 
-Pour build : make
+Pour build: make
 
-Pour tout destroy : make clean
+Pour tout destroy: make clean
