@@ -3,4 +3,4 @@
 
 Pour build : make
 
-Pour tout destroy : make destroy
+Pour tout destroy : make clean
