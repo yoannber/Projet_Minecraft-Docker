@@ -11,7 +11,7 @@ ip:
 	@echo "-----------------------------------"
 
 serve: ip
-	docker-compose up -d --build
+	docker-compose up --scale minecraft=3 -d --build
 
 clean:
 	docker-compose down
