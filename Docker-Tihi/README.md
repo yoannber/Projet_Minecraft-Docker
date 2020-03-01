@@ -1,8 +1,8 @@
 # Minecraft
 
 ## Commands
-*   make
-*   make clean
+** make
+* make clean
 
 ## Important to know
 Set the environment variable for the haproxy's container with the 'get_DIR.sh' script output :  
