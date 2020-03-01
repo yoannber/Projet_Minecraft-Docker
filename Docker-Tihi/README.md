@@ -5,7 +5,7 @@ Blabla
 * make clean
 
 ## Read this please
-Set the environment variable for the haproxy's container with the 'get_DIR.sh' script output :  
+Set the environment variable for the haproxy's container with the [get_DIR.sh] script output :  
 ```
 ./get_DIR.sh 
 ```
