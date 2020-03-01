@@ -1,5 +1,11 @@
-# MINECRAFT
+# Minecraft
 
-Pour build: make
+## Build the project
+```
+make
+```
 
-Pour tout destroy: make clean
+## Destroy the project
+```
+make clean
+```
