@@ -4,12 +4,15 @@
 * make
 * make clean
 
-## Build the project
+## Important to know
+Set the environment variable for the haproxy's container with the "get_DIR.sh" script output :  
 ```
-make
+./get_DIR.sh 
 ```
-
-## Destroy the project
+And replace  
 ```
-make clean
+...
+    environment:
+      - DIR=<your_output>
+...
 ```
