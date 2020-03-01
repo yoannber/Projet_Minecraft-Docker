@@ -1,7 +1,7 @@
 # Minecraft
 
 ## Commands
-** make
+* make
 * make clean
 
 ## Important to know
@@ -9,8 +9,7 @@ Set the environment variable for the haproxy's container with the 'get_DIR.sh' s
 ```
 ./get_DIR.sh 
 ```
-
-And put the output in : 
+As follow : 
 ```
 ...
     environment:
