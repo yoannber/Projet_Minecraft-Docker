@@ -16,6 +16,6 @@ haproxy:
     build: ./haproxy
     container_name: ggHaproxy
     environment:
-      - DIR=**<your_output>**
+      - DIR=<your_output>
 ...
 ```
