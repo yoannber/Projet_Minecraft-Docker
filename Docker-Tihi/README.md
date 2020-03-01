@@ -1,4 +1,4 @@
-#MINECRAFT
+# MINECRAFT
 
 Pour build: make
 
