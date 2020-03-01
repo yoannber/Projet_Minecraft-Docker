@@ -1,5 +1,9 @@
 # Minecraft
 
+## Commands
+* make
+* make clean
+
 ## Build the project
 ```
 make
