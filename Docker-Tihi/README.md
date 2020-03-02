@@ -9,13 +9,7 @@ Set the environment variable for the haproxy's container with the ***get_DIR.sh*
 ```
 ./get_DIR.sh 
 ```
-As follow : 
+Edit the file ***.env*** as follow : 
 ```
-...
-haproxy:
-    build: ./haproxy
-    container_name: ggHaproxy
-    environment:
-      - DIR=<your_output>
-...
+DIR=<your_output>
 ```
