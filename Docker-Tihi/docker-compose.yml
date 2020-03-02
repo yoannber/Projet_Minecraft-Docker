@@ -3,8 +3,6 @@ version: '3'
 services:
   minecraft:
     build: ./Dockerfile
-    environment:
-        server.hostname: ${SERVER_HOSTNAME}
     expose:
       - "25566"
       - "25562" 
@@ -18,12 +16,14 @@ services:
   haproxy:
     build: ./haproxy
     container_name: ggHaproxy
-    environment:
-      - DIR=docker-tihi
+    env_file:
+      - .env
     links:
       - minecraft
+      - rcon
     ports:
       - "36543:36543"
+      - "8080:8080"
     network_mode: "bridge"
     tty: true 
     stdin_open: true
@@ -34,10 +34,12 @@ services:
   rcon:
     build: ./rcon
     container_name: ggRcon
+    env_file:
+      - .env
     links:
       - minecraft
-    ports:
-      - "8080:80"
+    expose:
+      - "80"
     network_mode: "bridge"
     tty: true
     stdin_open: true

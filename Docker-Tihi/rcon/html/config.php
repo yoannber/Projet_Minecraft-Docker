@@ -18,7 +18,10 @@ This file is part of Minecraft-RCON-Console.
 
 $serverName = "My Server";
 
-$rconHost = "ggMinecraft";
+$gg = getenv('DIR');
+$ggMoc = $gg."_minecraft_1";
+
+$rconHost = $ggMoc;
 $rconPort = 25562;
 $rconPassword = "2442";
 
