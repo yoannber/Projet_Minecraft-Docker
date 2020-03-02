@@ -1,5 +1,8 @@
 # Minecraft
-Blabla
+Tests réalisés pour qu'un rcon puisse envoyer des commandes à plusieurs serveurs à la fois
+
+Modifications effectuées dans le fichier rcon/html/index.php (ajout des variables Info2 et Query2)
+
 ## Commands
 - make
 - make clean
