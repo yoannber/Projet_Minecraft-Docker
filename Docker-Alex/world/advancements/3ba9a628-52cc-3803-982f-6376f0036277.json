@@ -1,0 +1,21 @@
+{
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2020-03-02 20:04:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2020-03-02 19:31:35 +0000",
+      "minecraft:mountains": "2020-03-02 20:07:07 +0000",
+      "minecraft:beach": "2020-03-02 19:42:21 +0000",
+      "minecraft:river": "2020-03-02 20:06:59 +0000",
+      "minecraft:wooded_mountains": "2020-03-02 20:07:03 +0000",
+      "minecraft:stone_shore": "2020-03-02 20:07:01 +0000",
+      "minecraft:plains": "2020-03-02 19:30:34 +0000"
+    },
+    "done": false
+  },
+  "DataVersion": 2230
+}
