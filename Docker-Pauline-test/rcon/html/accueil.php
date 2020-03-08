@@ -3,17 +3,15 @@
         use xPaw\MinecraftPingException;
 	
 	# $gg = $_ENV['DIR']."_minecraft_1";
-	$gg = getenv('DIR');
-	$ggMoc  = $gg."_minecraft_1";
-	$ggMoc2 = $gg."_minecraft_2";
+	# $gg = getenv('DIR');
+	#$ggMoc  = $gg."_minecraft_1";
+
+	$ggMoc = $_GET['ggMoc'];
 
         // Edit this ->
         define( 'MQ_SERVER_ADDR', $ggMoc );
         define( 'MQ_SERVER_PORT', 25566 );
         define( 'MQ_TIMEOUT', 1 );
-
-        define( 'MQ_SERVER_ADDR_2', $ggMoc2 );
-	// Edit this <-
 
         // Display everything in browser, because some people can't look in logs for errors
         Error_Reporting( E_ALL | E_STRICT );
@@ -27,16 +25,11 @@
         $Info = false;
 	$Query = null;
 
-	$Info2 = false;
-	$Query2 = null;
-
         try
         {
                 $Query = new MinecraftPing( MQ_SERVER_ADDR, MQ_SERVER_PORT, MQ_TIMEOUT );
-                $Query2 = new MinecraftPing( MQ_SERVER_ADDR_2, MQ_SERVER_PORT, MQ_TIMEOUT );
 		
 		$Info = $Query->Query( );
-		$Info2 = $Query2->Query( );
 		
 		if( $Info === false )
                 {
@@ -54,13 +47,6 @@
 
                         $Info = $Query->QueryOldPre17( );
                 }
-		if( $Info2 === false )
-                {
-                        $Query2->Close( );
-                        $Query2->Connect( );
-
-                        $Info2 = $Query2->QueryOldPre17( );
-                }
         }
         catch( MinecraftPingException $e )
         {
@@ -72,10 +58,6 @@
                 $Query->Close( );
         }
 
-        if( $Query2 !== null )
-        {
-                $Query2->Close( );
-        }
         $Timer = Number_Format( MicroTime( true ) - $Timer, 4, '.', '' );
 ?>
 
@@ -110,7 +92,8 @@
 <body>
 	<!-- Stack the columns on mobile by making one full-width and the other half-width -->
 	<div class="container-fluid content" style="padding-top: 15px;">
-		<div class="alert alert-info text-center" id="alertMessenge">Welcome to Minecraft RCON Console.</div>
+		<div class="alert alert-info text-center" id="alertMessenge">Welcome to Minecraft TESTPAULINE RCON Console.</div>
+		<div class="alert alert-info text-center" id="alertMessenge">VOUS GEREZ ACTUELLEMENT :<?php echo $ggMoc ?> </div>
 		<div class="row">
 			<div class="col-md-8 col-lg-8 console">
 				<div class="card mb-3">
@@ -172,67 +155,6 @@
                                        					 <tbody>
 									  <?php if( $Info !== false ): ?>
 										<?php foreach( $Info as $InfoKey => $InfoValue ): ?>
-                                                					<tr>
-	                                                        			<td><?php echo htmlspecialchars( $InfoKey ); ?></td>
-        	                                                			<td><?php
-											if( $InfoKey === 'favicon' )
-        										{
-											   echo '<img width="64" height="64" src="' . Str_Replace( "\n", "", $InfoValue ) . '">';
-											}
-											else if( Is_Array( $InfoValue ) )
-											{
-																								
-												echo "<pre>";
-												if (isset($InfoValue['max']) || isset($InfoValue['online']) || isset($InfoValue['sample']) )
-												{
-													echo "Nombre de joueurs connectés: " ;
-													echo $InfoValue['online'];
-													echo "/";
-													echo $InfoValue['max'];
-													echo "\n";
-													echo "Joueur(s) connecté(s): \n";
-													if (isset($InfoValue['sample']))
-													{
-													foreach($InfoValue['sample'] as $value)
-													{
-														echo $value['name'];
-														echo "\n";
-													}
-													}
-												}
-												else if (isset($InfoValue['text']))
-												{
-													echo $InfoValue['text'];
-												}
-												else if (isset($InfoValue['name']))
-												{
-													echo "version: ";
-													echo $InfoValue['name'];
-												}
-												else
-												{
-
-													print_r( $InfoValue );
-												}
-									        	        echo "</pre>";
-	        									}
-        										else
-        										{
-										                echo htmlspecialchars( $InfoValue );
-        										}
-										  	?></td>
-                                                				    </tr>
-										<?php endforeach; ?>
-									<?php else: ?>
-                                                			<tr>
-                                                        			<td colspan="2">No information received</td>
-                                                			</tr>
-									<?php endif; ?>
-
-
-
-									  <?php if( $Info2 !== false ): ?>
-										<?php foreach( $Info2 as $InfoKey => $InfoValue ): ?>
                                                 					<tr>
 	                                                        			<td><?php echo htmlspecialchars( $InfoKey ); ?></td>
         	                                                			<td><?php
