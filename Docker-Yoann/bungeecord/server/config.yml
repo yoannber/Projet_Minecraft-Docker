@@ -24,7 +24,7 @@ servers:
     restricted: false
 listeners:
 - query_port: 36544
-  motd: 'Seveur Minecraft Y.T.P.A'
+  motd: 'Serveur Minecraft Y.T.P.A'
   tab_list: GLOBAL_PING
   query_enabled: true
   proxy_protocol: true
