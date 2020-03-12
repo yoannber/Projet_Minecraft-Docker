@@ -1,0 +1,61 @@
+{
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2020-03-02 19:24:18 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2020-03-02 19:24:18 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2020-03-02 19:24:18 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2020-03-02 19:27:03 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2020-03-02 19:24:18 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/yellow_dye_from_dandelion": {
+    "criteria": {
+      "has_yellow_flower": "2020-03-02 19:23:31 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2020-03-02 19:24:18 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2020-03-02 19:24:18 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2020-03-02 19:22:26 +0000",
+      "minecraft:beach": "2020-03-02 19:24:37 +0000",
+      "minecraft:river": "2020-03-02 19:25:46 +0000",
+      "minecraft:swamp": "2020-03-02 19:27:14 +0000",
+      "minecraft:plains": "2020-03-02 19:21:21 +0000"
+    },
+    "done": false
+  },
+  "DataVersion": 2230
+}
