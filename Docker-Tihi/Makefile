@@ -10,8 +10,8 @@ ip:
 	@echo "Server Hostname: $(SERVER_HOSTNAME)"
 	@echo "-----------------------------------"
 
-serve: ip
-	docker-compose up -d --build
+serve:	ip
+	docker-compose up --scale minecraft=2 -d --build
 
 clean:
 	docker-compose down

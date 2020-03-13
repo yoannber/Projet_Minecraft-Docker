@@ -6,6 +6,7 @@ services:
     expose:
       - "25566"
       - "25562"
+      - "8123"
     network_mode: "bridge"
     tty: true
     stdin_open: true
@@ -14,25 +15,14 @@ services:
       - ./world:/world/
       - ./world_nether:/world_nether/
       - ./world_the_end:/world_the_end/
-    ports:
-     - "8123:8123"
-  minecraftback:
-    build: ./back
-    expose:
-      - "25566"
-      - "25562"
-    network_mode: "bridge"
-    tty: true
-    stdin_open: true
-    restart: always
 
   dockercraft:
     build: ./dockercraft
+    expose:
+      - "25565"
     container_name: Dockercraft
     volumes:
-     - "/var/run/docker.sock:/var/run/docker.sock"
-    ports:
-     - "25565:25565"
+      - "/var/run/docker.sock:/var/run/docker.sock"
     tty: true
 
   haproxy:
@@ -42,17 +32,16 @@ services:
       - .env
     links:
       - minecraft
-      - minecraftback
       - rcon
     ports:
       - "36543:36543"
       - "8080:8080"
+      - "8123:8123"
     network_mode: "bridge"
     tty: true 
     stdin_open: true
     depends_on:
       - minecraft
-      - minecraftback
     restart: unless-stopped
 
   rcon:
@@ -70,5 +59,4 @@ services:
     stdin_open: true
     depends_on:
       - minecraft
-      - minecraftback
     restart: always
