@@ -11,9 +11,9 @@ services:
     stdin_open: true
     restart: always
     volumes:
-      - ./world:/world/
-      - ./world_nether:/world_nether/
-      - ./world_the_end:/world_the_end/
+      - ./worlds/world:/world/
+      - ./worlds/world_nether:/world_nether/
+      - ./worlds/world_the_end:/world_the_end/
     ports:
      - "8123:8123"
   minecraftback:
