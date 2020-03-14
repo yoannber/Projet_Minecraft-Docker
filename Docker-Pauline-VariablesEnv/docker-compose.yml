@@ -1,0 +1,103 @@
+version: '3'
+
+networks:
+    minecraft_network:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: ${NETWORK_SUBNET}
+
+services:
+  minecraft_image_1:
+    container_name: ${PROJECT_NAME}_minecraft_1
+    build: ./Dockerfile
+    expose:
+      - ${EXPOSED_PORT_1}
+      - ${EXPOSED_PORT_2}
+      - ${EXPOSED_PORT_3}
+    networks:
+        minecraft_network:
+            ipv4_address: ${MINECRAFT_1_IP}
+    tty: true
+    stdin_open: true
+    restart: always
+    volumes:
+      - ./worlds/world:/world/
+      - ./worlds/world_nether:/world_nether/
+      - ./worlds/world_the_end:/world_the_end/
+
+  minecraft_image_2:
+    container_name: ${PROJECT_NAME}_minecraft_2
+    build: ./Dockerfile
+    expose:
+      - ${EXPOSED_PORT_1}
+      - ${EXPOSED_PORT_2}
+      - ${EXPOSED_PORT_3}
+    networks:
+        minecraft_network:
+            ipv4_address: ${MINECRAFT_2_IP}
+    tty: true
+    stdin_open: true
+    restart: always
+    volumes:
+      - ./worlds/world:/world/
+      - ./worlds/world_nether:/world_nether/
+      - ./worlds/world_the_end:/world_the_end/
+
+  haproxy:
+    build: ./haproxy
+    container_name: ${PROJECT_NAME}_Haproxy
+    env_file:
+      - .env
+    links:
+      - minecraft_image_1
+      - minecraft_image_2
+      - rcon
+      - dockercraft
+    ports:
+      - "36543:36543"
+      - "8080:8080"
+      - "8123:8123"
+    networks:
+        minecraft_network:
+            ipv4_address: ${HA_PROXY_IP}
+    tty: true 
+    stdin_open: true
+    depends_on:
+      - minecraft_image_1
+      - minecraft_image_2
+    restart: unless-stopped
+
+  rcon:
+    build: ./rcon
+    container_name: ${PROJECT_NAME}_Rcon
+    env_file:
+      - .env
+    links:
+      - minecraft_image_1
+      - minecraft_image_2
+    expose:
+      - "80"
+    networks:
+        minecraft_network:
+            ipv4_address: ${RCON_IP}
+    tty: true
+    stdin_open: true
+    depends_on:
+      - minecraft_image_1
+      - minecraft_image_2
+    restart: always
+
+  dockercraft:
+    build: ./dockercraft
+    expose:
+      - ${DOCKERCRAFT_PORT}
+    container_name: ${PROJECT_NAME}_Dockercraft
+    networks:
+        minecraft_network:
+            ipv4_address: ${DOCKERCRAFT_IP}
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    tty: true
+
