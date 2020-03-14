@@ -13,6 +13,7 @@ Ajout de nouvelles variables d'environnement dans le fichier .env + map & Docker
     - Variables de nom + IP (j'ai enlevé les ports car c'est pas très lisible et c'est pas forcément utile)
 - html/rcon : fichiers index et conf pour pouvoir administrer le docker (concerne seulement le conteneur "Minecraft_2" car c'est lui qui est toujours sélectionné par défaut par l'algo de l'HAProxy)
 - Haproxy : fichier de configuration avec un nouveau front/back pour dockercraft et pour le map (via une ACL dans le front du jeu principal)
+- Dockercraft : ajout du front sur l'HAProxy (écoute sur le 36544)
 
 ## À voir
 - Voir à créer potentiellement un autre dossier rcon pour pouvoir administrer le second serveur (param minecraft_2)
