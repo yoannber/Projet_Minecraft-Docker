@@ -5,8 +5,6 @@ services:
     minecraft_1:
         build: ./Dockerfile
         container_name: ${PROJECT_NAME}_Minecraft_1
-        env_file:
-            - .env
         expose:
             - 25566
             - 25562
@@ -25,8 +23,6 @@ services:
     minecraft_2:
         build: ./Dockerfile
         container_name: ${PROJECT_NAME}_Minecraft_2
-        env_file:
-            - .env
         expose:
             - 25566
             - 25562
