@@ -105,6 +105,7 @@ services:
             BACKUP_CRON_EXPRESSION: ${BACKUP_CRON_EXPRESSION}
         volumes:
             - ./worlds:/backup/worlds:ro
+
 networks:
     minecraft_network:
         driver: bridge
