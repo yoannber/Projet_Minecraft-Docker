@@ -19,4 +19,3 @@ Ajout de nouvelles variables d'environnement dans le fichier .env + map & Docker
 ## À voir
 - Voir à créer potentiellement un autre dossier rcon pour pouvoir administrer le second serveur (param minecraft_2)
 - Voir à réduire le temps de check du HAProxy car la bascule me paraît assez longue ? (juste un test effectué avec un docker stop) : effectivement, c'est assez long...
-- Trouver un moyen de sécuriser le fichier .env qui contient les access keys pour le compte AWS de Yoann
