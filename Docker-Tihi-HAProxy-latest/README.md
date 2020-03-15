@@ -1,21 +1,12 @@
 # Minecraft
-Ajout de nouvelles variables d'environnement dans le fichier .env + map & Dockercraft fonctionnels (via le HAProxy)
+- Ajout du backup du répertoire "./worlds" tous les jours à minuit vers un bucket S3 AWS
 
-## Commandes pour Build et Destroy
+## Commandes
 - make
 - make clean
 
-## Ce qui a été modifié
-- Makefile : le docker compose est lancé différement
-- Docker-compose : 
-    - Pour pouvoir mettre deux noms différents aux dockers minecraft : création de deux services minecraft différents (toujours d'actualité)
-    - Network commun
-    - Variables de nom + IP (j'ai enlevé les ports car c'est pas très lisible et c'est pas forcément utile)
-- html/rcon : fichiers index et conf pour pouvoir administrer le docker (concerne seulement le conteneur "Minecraft_2" car c'est lui qui est toujours sélectionné par défaut par l'algo de l'HAProxy)
-- HAProxy : fichier de configuration avec un nouveau front/back pour dockercraft et pour le map (via une ACL dans le front du jeu principal)
-- Dockercraft : ajout du front sur le service HAProxy dans le docker-compose (écoute sur le 36544)
-- Backup : on controle le backup sur le S3 de Yoann via la syntaxe Cron (ne pas oublier qu'il y a une heure de retard dans les conteneurs Docker)
+## Répertoire "./worlds"
+- Il faut recréer l'aborescence "./worlds/word/" "./worlds/world_nether" "./worlds/world_the_end"
 
-## À voir
-- Voir à créer potentiellement un autre dossier rcon pour pouvoir administrer le second serveur (param minecraft_2)
-- Voir à réduire le temps de check du HAProxy car la bascule me paraît assez longue ? (juste un test effectué avec un docker stop) : effectivement, c'est assez long...
+## Fichier ".env"
+- Il faut recréer le fichier ".env" qui embarque les addresses IP des conteneurs Docker et les infos du S3
