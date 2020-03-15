@@ -12,7 +12,7 @@ ip:
 
 serve:	ip
 	# docker-compose up --scale minecraft=2 -d --build
-	docker-compose up -d --build
+	docker-compose up -d --build --remove-orphans
 
 clean:
 	docker-compose down
