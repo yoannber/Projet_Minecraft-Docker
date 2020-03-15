@@ -84,9 +84,9 @@ services:
 
     dockercraft:
         build: ./dockercraft
+        container_name: ${PROJECT_NAME}_Dockercraft
         expose:
             - 25565
-        container_name: ${PROJECT_NAME}_Dockercraft
         networks:
             minecraft_network:
                 ipv4_address: ${DOCKERCRAFT_IP}
@@ -96,6 +96,7 @@ services:
     
     backup_worlds:
         image: peterrus/s3-cron-backup
+        container_name: ${PROJECT_NAME}_Backup
         environment:
             - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
             - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
