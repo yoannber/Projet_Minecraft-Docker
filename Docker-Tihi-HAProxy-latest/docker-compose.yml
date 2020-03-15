@@ -97,11 +97,14 @@ services:
     backup:
         image: futurice/docker-volume-backup:2.0.0
         container_name: ${PROJECT_NAME}_Backup
-        env_file:
-            - .aws
+        environment:
+            AWS_S3_BUCKET_NAME: ${AWS_S3_BUCKET_NAME}
+            AWS_ACCESS_KEY_ID: ${AWS_SECRET_ACCESS_KEY}
+            AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+            AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}
+            BACKUP_CRON_EXPRESSION: ${BACKUP_CRON_EXPRESSION}
         volumes:
             - ./worlds:/backup/worlds:ro
-
 networks:
     minecraft_network:
         driver: bridge
