@@ -25,4 +25,5 @@ AWS_SECRET_ACCESS_KEY=sUp3rS3cr3tK3y0fgr34ts3cr3cy
 S3_BUCKET_URL=s3://bucket-fml/
 AWS_DEFAULT_REGION=eu-west-3
 CRON_SCHEDULE=0 * * * * #toutes les heures
+BACKUP_NAME=Backup_worlds_and_plugins
 ```
