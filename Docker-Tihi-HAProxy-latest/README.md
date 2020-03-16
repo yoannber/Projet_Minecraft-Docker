@@ -1,5 +1,5 @@
 # Minecraft
-- Ajout du backup du répertoire "./worlds" toutes les heures vers un bucket S3 AWS
+- Ajout du backup du répertoire "data" toutes les heures vers un bucket S3 AWS
 
 ## Commandes
 - make (pour build)
