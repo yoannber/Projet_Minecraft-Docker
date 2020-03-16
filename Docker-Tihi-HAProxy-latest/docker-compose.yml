@@ -18,6 +18,7 @@ services:
             - ./worlds/world_1:/world/
             - ./worlds/world_nether_1:/world_nether/
             - ./worlds/world_the_end_1:/world_the_end/
+            - ./plugins/plugins_1:/plugins/
     
     minecraft_2:
         build: ./Dockerfile
@@ -36,6 +37,7 @@ services:
             - ./worlds/world_2:/world/
             - ./worlds/world_nether_2:/world_nether/
             - ./worlds/world_the_end_2:/world_the_end/
+            - ./plugins/plugins_2:/plugins/
 
     haproxy:
         build: ./haproxy
