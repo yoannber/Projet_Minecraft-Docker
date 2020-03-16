@@ -6,7 +6,8 @@
 - make clean
 
 ## Répertoire "./worlds"
-- Il faut recréer l'aborescence :                                                                  
+- Il faut recréer l'aborescence :
+
 ![](worlds_tree.png)
 
 ## Fichier ".env"
