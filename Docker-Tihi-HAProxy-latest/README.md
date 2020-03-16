@@ -5,7 +5,7 @@
 - make (pour build)
 - make clean (pour destroy)
 
-## Répertoire "./worlds"
+## Répertoire "data"
 - Il faut recréer l'aborescence :
 
   ![](Data_tree.png)
