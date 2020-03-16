@@ -108,7 +108,7 @@ services:
             - BACKUP_NAME=${BACKUP_NAME}
         volumes:
             - ./data:/data:ro
-        restart: always               
+        restart: always 
     
 networks:
     minecraft_network:
