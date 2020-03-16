@@ -19,7 +19,7 @@ services:
             - ./data/worlds/world_nether_1:/world_nether/
             - ./data/worlds/world_the_end_1:/world_the_end/
             - ./data/plugins/plugins_1:/plugins/
-    
+
     minecraft_2:
         build: ./Dockerfile
         container_name: ${PROJECT_NAME}_Minecraft_2
@@ -57,7 +57,7 @@ services:
         networks:
             minecraft_network:
                 ipv4_address: ${HAPROXY_IP}
-        tty: true 
+        tty: true
         stdin_open: true
         depends_on:
             - minecraft_1
@@ -95,7 +95,7 @@ services:
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
         tty: true
-    
+
     backup_worlds:
         image: peterrus/s3-cron-backup
         container_name: ${PROJECT_NAME}_Backup
@@ -108,7 +108,7 @@ services:
             - BACKUP_NAME=${BACKUP_NAME}
         volumes:
             - ./data:/data:ro
-        restart: always 
+        restart: always
     
 networks:
     minecraft_network:
