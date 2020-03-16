@@ -2,8 +2,8 @@
 - Ajout du backup du répertoire "./worlds" toutes les heures vers un bucket S3 AWS
 
 ## Commandes
-- make
-- make clean
+- make (pour build)
+- make clean (pour destroy)
 
 ## Répertoire "./worlds"
 - Il faut recréer l'aborescence :
