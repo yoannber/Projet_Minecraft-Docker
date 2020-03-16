@@ -15,10 +15,10 @@ services:
         stdin_open: true
         restart: always
         volumes:
-            - ./worlds/world_1:/world/
-            - ./worlds/world_nether_1:/world_nether/
-            - ./worlds/world_the_end_1:/world_the_end/
-            - ./plugins/plugins_1:/plugins/
+            - ./data/worlds/world_1:/world/
+            - ./data/worlds/world_nether_1:/world_nether/
+            - ./data/worlds/world_the_end_1:/world_the_end/
+            - ./data/plugins/plugins_1:/plugins/
     
     minecraft_2:
         build: ./Dockerfile
@@ -34,10 +34,10 @@ services:
         stdin_open: true
         restart: always
         volumes:
-            - ./worlds/world_2:/world/
-            - ./worlds/world_nether_2:/world_nether/
-            - ./worlds/world_the_end_2:/world_the_end/
-            - ./plugins/plugins_2:/plugins/
+            - ./data/worlds/world_2:/world/
+            - ./data/worlds/world_nether_2:/world_nether/
+            - ./data/worlds/world_the_end_2:/world_the_end/
+            - ./data/plugins/plugins_2:/plugins/
 
     haproxy:
         build: ./haproxy
@@ -107,7 +107,7 @@ services:
             - CRON_SCHEDULE=${CRON_SCHEDULE}
             - BACKUP_NAME=worlds
         volumes:
-            - ./worlds:/data:ro
+            - ./data:/data:ro
         restart: always               
     
 networks:
