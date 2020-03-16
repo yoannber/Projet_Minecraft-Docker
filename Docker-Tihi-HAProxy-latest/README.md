@@ -8,7 +8,7 @@
 ## Répertoire "./worlds"
 - Il faut recréer l'aborescence :
 
-![](worlds_tree.png)
+ ![](worlds_tree.png)
 
 ## Fichier ".env"
 - Il faut recréer le fichier ".env" qui embarque les addresses IP des conteneurs Docker et les infos du S3. Par exemple :
