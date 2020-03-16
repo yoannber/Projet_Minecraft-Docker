@@ -10,7 +10,8 @@
 
 ## Fichier ".env"
 - Il faut recréer le fichier ".env" qui embarque les addresses IP des conteneurs Docker et les infos du S3
-Par exemple : ``
+Par exemple :
+```
 PROJECT_NAME=Projet_de_ouf
 NETWORK_SUBNET=192.168.1.0/24
 MINECRAFT_1_IP=192.168.1.11
@@ -23,4 +24,4 @@ AWS_SECRET_ACCESS_KEY=sUp3rS3cr3tK3y0fgr34ts3cr3cy
 S3_BUCKET_URL=s3://bucket-fml/
 AWS_DEFAULT_REGION=eu-west-3
 CRON_SCHEDULE=0 * * * * #toutes les heures
-``
+```
