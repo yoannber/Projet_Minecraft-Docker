@@ -15,9 +15,9 @@ services:
         stdin_open: true
         restart: always
         volumes:
-            - ./worlds/world:/world/
-            - ./worlds/world_nether:/world_nether/
-            - ./worlds/world_the_end:/world_the_end/
+            - ./worlds/world_1:/world/
+            - ./worlds/world_nether_1:/world_nether/
+            - ./worlds/world_the_end_1:/world_the_end/
     
     minecraft_2:
         build: ./Dockerfile
@@ -33,9 +33,9 @@ services:
         stdin_open: true
         restart: always
         volumes:
-            - ./worlds/world:/world/
-            - ./worlds/world_nether:/world_nether/
-            - ./worlds/world_the_end:/world_the_end/
+            - ./worlds/world_2:/world/
+            - ./worlds/world_nether_2:/world_nether/
+            - ./worlds/world_the_end_2:/world_the_end/
 
     haproxy:
         build: ./haproxy
