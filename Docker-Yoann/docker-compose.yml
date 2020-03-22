@@ -25,7 +25,6 @@ services:
         expose:
             - 25566
             - 25562
-            - 8123
         networks:
             minecraft_network:
                 ipv4_address: ${MINECRAFT_2_IP}
@@ -35,21 +34,42 @@ services:
         volumes:
             - ./data/worlds/world_2:/world/
 
-    bungeecord:
-        build: ./bungeecord
-        container_name: ${PROJECT_NAME}_BungeeCord
-        env_files:
+    haproxy:
+        build: ./haproxy
+        container_name: ${PROJECT_NAME}_HAProxy
+        env_file:
             - .env
         links:
-            - minecraft_1
-            - minecraft_2
-            - rcon
+            - bungeecord
             - dockercraft
+            - rcon
         ports:
             - 36543:36543
             - 36544:36544
             - 8080:8080
             - 8123:8123
+        networks:
+            minecraft_network:
+                ipv4_address: ${HAPROXY_IP}
+        tty: true
+        stdin_open: true
+        depends_on:
+            - minecraft_1
+            - minecraft_2
+            - bungeecord
+        restart: unless-stopped
+
+    bungeecord:
+        build: ./bungeecord
+        container_name: ${PROJECT_NAME}_BungeeCord
+        expose:
+            - 36543:36543
+            - 36545:36545
+        env_files:
+            - .env
+        links:
+            - minecraft_1
+            - minecraft_2
         networks:
             minecraft_network:
                 ipv4_address: ${BUNGEECORD_IP}

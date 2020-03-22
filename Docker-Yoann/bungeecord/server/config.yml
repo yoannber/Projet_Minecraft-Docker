@@ -20,10 +20,14 @@ disabled_commands:
 servers:
   monde1:
     motd: 'Monde 1'
-    address: DockerProject_minecraft_1:25566
+    address: ${MINECRAFT_1_IP}:25566
+    restricted: false
+  monde2:
+    motd: 'Monde 2'
+    address: ${MINECRAFT_2_IP}:25566
     restricted: false
 listeners:
-- query_port: 36544
+- query_port: 36545
   motd: 'Serveur Minecraft Y.T.P.A'
   tab_list: GLOBAL_PING
   query_enabled: true
@@ -33,9 +37,10 @@ listeners:
   ping_passthrough: false
   priorities:
   - monde1
+  - monde2
   bind_local_address: true
   host: 0.0.0.0:36543
-  max_players: -1
+  max_players: 20
   tab_size: 60
   force_default_server: false
 ip_forward: true
