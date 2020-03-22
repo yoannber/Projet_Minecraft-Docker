@@ -63,8 +63,7 @@ services:
         build: ./bungeecord
         container_name: ${PROJECT_NAME}_BungeeCord
         expose:
-            - 36543:36543
-            - 36545:36545
+            - 36543
         env_files:
             - .env
         links:
