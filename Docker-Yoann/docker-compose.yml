@@ -64,7 +64,7 @@ services:
         container_name: ${PROJECT_NAME}_BungeeCord
         expose:
             - 36543
-        env_files:
+        env_file:
             - .env
         links:
             - minecraft_1
