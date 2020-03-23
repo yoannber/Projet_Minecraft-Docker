@@ -2,13 +2,12 @@
         use xPaw\MinecraftPing;
         use xPaw\MinecraftPingException;
 
-	# $gg = $_ENV['DIR']."_minecraft_1";
-	$gg = getenv('PROJECT_NAME');
-	$ggMoc = $gg."_minecraft_1";
-	$port = getenv('EXPOSED_PORT_1');
+	// $project_name = getenv('PROJECT_NAME');
+	// $app_name = $project_name."_Minecraft_1";
+
         // Edit this ->
-        define( 'MQ_SERVER_ADDR', $ggMoc );
-        define( 'MQ_SERVER_PORT', $port );
+        define( 'MQ_SERVER_ADDR', getenv('MINECRAFT_1_IP') );
+        define( 'MQ_SERVER_PORT', 25566 );
         define( 'MQ_TIMEOUT', 1 );
         // Edit this <-
 

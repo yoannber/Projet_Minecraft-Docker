@@ -1,7 +1,5 @@
-server_connect_timeout: 5000
-remote_ping_cache: -1
-forge_support: false
 player_limit: 20
+ip_forward: true
 permissions:
   default:
   - bungeecord.command.server
@@ -13,45 +11,43 @@ permissions:
   - bungeecord.command.reload
 timeout: 30000
 log_commands: false
-network_compression_threshold: 256
 online_mode: false
-disabled_commands:
-- disabledcommandhere
 servers:
-  monde1:
-    motd: 'Monde 1'
-    address: ${MINECRAFT_1_IP}:25566
+  world_1:
+    motd: 'World #1'
+    address: 192.168.2.10:25566
     restricted: false
-  monde2:
-    motd: 'Monde 2'
-    address: ${MINECRAFT_2_IP}:25566
+  world_2:
+    motd: 'World #2'
+    address: 192.168.2.20:25566
     restricted: false
 listeners:
-- query_port: 36545
-  motd: 'Serveur Minecraft Y.T.P.A'
+- query_port: 36543
+  motd: 'Y.T.P.A'
+  priorities:
+  - world_1
+  - world_2
+  bind_local_address: true
   tab_list: GLOBAL_PING
   query_enabled: true
-  proxy_protocol: true
+  host: 0.0.0.0:36543
   forced_hosts:
     pvp.md-5.net: pvp
-  ping_passthrough: false
-  priorities:
-  - monde1
-  - monde2
-  bind_local_address: true
-  host: 0.0.0.0:36543
   max_players: 20
   tab_size: 60
-  force_default_server: false
-ip_forward: true
-remote_ping_timeout: 5000
-prevent_proxy_connections: false
+  ping_passthrough: false
+  force_default_server: true
+  proxy_protocol: false
+disabled_commands:
+- disabledcommandhere
+network_compression_threshold: 256
 groups:
-  Yobna:
+  zfielicious:
   - admin
   md_5:
   - admin
 connection_throttle: 4000
-stats: 16733789-6384-49fc-aed6-0b152dcc5eba
 connection_throttle_limit: 3
-log_pings: true
+stats: f2876aa6-74d2-468c-90ee-1377111f1c9f
+forge_support: false
+inject_commands: false

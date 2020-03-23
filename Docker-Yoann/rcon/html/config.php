@@ -18,10 +18,10 @@ This file is part of Minecraft-RCON-Console.
 
 $serverName = "My Server";
 
-$gg = getenv('PROJECT_NAME');
-$ggMoc = $gg."_minecraft_1";
-$rconHost = $ggMoc;
-$rconPort = getenv('EXPOSED_PORT_2');
+// $project_name = getenv('PROJECT_NAME');
+// $app_name = $project_name."_Minecraft_1";
+$rconHost = getenv('MINECRAFT_1_IP');
+$rconPort = 25562;
 $rconPassword = "2442";
 
 require(__DIR__ . "/authsys.php");
