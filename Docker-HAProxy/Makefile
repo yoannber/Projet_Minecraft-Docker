@@ -1,4 +1,4 @@
-DOCKER_COMPOSE_VERSION=1.21.0
+DOCKER_COMPOSE_VERSION=1.25.4
 
 export SERVER_HOSTNAME=$(shell hostname -I | cut -f1 -d' ')
 
