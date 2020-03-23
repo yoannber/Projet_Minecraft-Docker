@@ -9,7 +9,7 @@ La version HAProxy embarque la fonctionnalité qui permet au jeu de fonctionner 
 BungeeCord permet de remédier à ce manque car il permet de rediriger les joueurs automatiquement vers un second serveur.
 
 ## Détails
-Voici ce que l'on peut retrouver dans les deux versions :
+**Voici ce que l'on peut retrouver dans les deux versions :**
 - Minecraft version 1.15.2
 - Rcon : webconsole qui permet d'administrer les serveurs Minecraft, on peut également y retrouver certaines infos (nom serveurs, nombre de joueurs, version du jeu, etc.) - ce webconsole a été complétement développé from scratch (en s'inpirant des travaux d'autres webconsole Rcon) 
 - Dockercraft : un ajout qui permet d'administrer les conteneurs Docker dans le jeu Minecraft (il faut une version Minecraft inférieure à la 1.12.2)
