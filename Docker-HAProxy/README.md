@@ -1,4 +1,4 @@
-# Minecraft : Version avec uniquement HAProxy
+# Minecraft : version avec uniquement HAProxy
 **Voici le schéma correspondant :**
 <p align="center"> <img src="images/HAProxy.png" alt="" title="" width="652" height="511" /> </p>
 
