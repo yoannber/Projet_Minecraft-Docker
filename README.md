@@ -11,6 +11,6 @@ BungeeCord permet de remédier à ce manque car il permet de rediriger les joueu
 ## Détails
 **Voici ce que l'on peut retrouver dans les deux versions :**
 - *Minecraft version 1.15.2*
-- *Rcon* : webconsole qui permet d'administrer les serveurs Minecraft, on peut également y retrouver certaines infos (nom serveurs, nombre de joueurs, version du jeu, etc.) - ce webconsole a été complétement développé from scratch (en s'inpirant des travaux d'autres webconsole Rcon) 
+- *Rcon* : webconsole qui permet d'administrer les serveurs Minecraft, on peut également y retrouver certaines infos (nom serveurs, nombre des joueurs, version du jeu, etc.) - ce webconsole a été complétement développé from scratch (en s'inspirant des travaux d'autres webconsole Rcon) 
 - *Dockercraft* : un ajout qui permet d'administrer les conteneurs Docker dans le jeu Minecraft (il faut une version Minecraft inférieure à la 1.12.2)
 - *Backup* : permet de backupé les data (sauvegardes de la map et des progressions) vers un bucket S3 sur AWS - à savoir qu'il mettre certaines informations sensibles dans le fichier ".env" (attention donc à ne pas partager ce fichier après avoir renseigné ces infos)
