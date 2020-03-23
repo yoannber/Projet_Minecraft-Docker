@@ -47,7 +47,7 @@ services:
         links:
             - minecraft_1
             - minecraft_2
-            # - dockercraft
+            - dockercraft
             - rcon
         ports:
             - 36543:36543
@@ -84,17 +84,17 @@ services:
             - minecraft_2
         restart: always
 
-#    dockercraft:
-#        build: ./dockercraft
-#        container_name: ${PROJECT_NAME}_Dockercraft
-#        expose:
-#            - 25565
-#        networks:
-#            minecraft_network:
-#                ipv4_address: ${DOCKERCRAFT_IP}
-#        volumes:
-#            - /var/run/docker.sock:/var/run/docker.sock
-#        tty: true
+    dockercraft:
+        build: ./dockercraft
+        container_name: ${PROJECT_NAME}_Dockercraft
+        expose:
+            - 25565
+        networks:
+            minecraft_network:
+                ipv4_address: ${DOCKERCRAFT_IP}
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        tty: true
 
     backup_worlds:
         image: peterrus/s3-cron-backup
