@@ -1,0 +1,132 @@
+version: '3'
+
+services:
+    minecraft_1:
+        build: ./Dockerfile
+        container_name: ${PROJECT_NAME}_Minecraft_1
+        expose:
+            - 25566
+            - 25562
+            - 8123
+        networks:
+            minecraft_network:
+                ipv4_address: ${MINECRAFT_1_IP}
+        tty: true
+        stdin_open: true
+        restart: always
+        volumes:
+            - ./data/worlds/world_1:/world/
+            - ./data/worlds/world_nether_1:/world_nether/
+            - ./data/worlds/world_the_end_1:/world_the_end/
+
+    minecraft_2:
+        build: ./DockerfileLite
+        container_name: ${PROJECT_NAME}_Minecraft_2
+        expose:
+            - 25566
+            - 25562
+        networks:
+            minecraft_network:
+                ipv4_address: ${MINECRAFT_2_IP}
+        tty: true
+        stdin_open: true
+        restart: always
+        volumes:
+            - ./data/worlds/world_2:/world/
+
+    haproxy:
+        build: ./haproxy
+        container_name: ${PROJECT_NAME}_HAProxy
+        env_file:
+            - .env
+        links:
+            - bungeecord
+            - dockercraft
+            - rcon
+        ports:
+            - 36543:36543
+            - 36544:36544
+            - 8080:8080
+            - 8123:8123
+        networks:
+            minecraft_network:
+                ipv4_address: ${HAPROXY_IP}
+        tty: true
+        stdin_open: true
+        depends_on:
+            - minecraft_1
+            - minecraft_2
+            - bungeecord
+        restart: unless-stopped
+
+    bungeecord:
+        build: ./bungeecord
+        container_name: ${PROJECT_NAME}_BungeeCord
+        expose:
+            - 36543
+        links:
+            - minecraft_1
+            - minecraft_2
+        networks:
+            minecraft_network:
+                ipv4_address: ${BUNGEECORD_IP}
+        tty: true
+        stdin_open: true
+        depends_on:
+            - minecraft_1
+            - minecraft_2
+        restart: unless-stopped
+
+    rcon:
+        build: ./rcon
+        container_name: ${PROJECT_NAME}_Rcon
+        env_file:
+            - .env
+        links:
+            - minecraft_1
+            - minecraft_2
+        expose:
+            - 80
+        networks:
+            minecraft_network:
+                ipv4_address: ${RCON_IP}
+        tty: true
+        stdin_open: true
+        depends_on:
+            - minecraft_1
+            - minecraft_2
+        restart: always
+
+    dockercraft:
+        build: ./dockercraft
+        container_name: ${PROJECT_NAME}_Dockercraft
+        expose:
+            - 25565
+        networks:
+            minecraft_network:
+                ipv4_address: ${DOCKERCRAFT_IP}
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        tty: true
+
+    backup:
+        image: peterrus/s3-cron-backup
+        container_name: ${PROJECT_NAME}_Backup
+        environment:
+            - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+            - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+            - S3_BUCKET_URL=${S3_BUCKET_URL}
+            - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+            - CRON_SCHEDULE=${CRON_SCHEDULE}
+            - BACKUP_NAME=${BACKUP_NAME}
+        volumes:
+            - ./data:/data:ro
+        restart: always
+    
+networks:
+    minecraft_network:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: ${NETWORK_SUBNET}
