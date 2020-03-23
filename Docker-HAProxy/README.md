@@ -1,5 +1,4 @@
-# Minecraft
-**VERSION FULL HAPROXY**
+# Minecraft : Version avec uniquement HAProxy
 
 ## Commandes
 - make (pour build)
