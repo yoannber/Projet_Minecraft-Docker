@@ -1,4 +1,6 @@
 # Minecraft : Version avec uniquement HAProxy
+**Voici le schéma correspondant :**
+<p align="center"> <img src="images/HAProxy-BungeeCord.png" alt="" title="" width="654" height="511" /> </p>
 
 ## Commandes
 - make (pour build)
