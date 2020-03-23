@@ -8,7 +8,6 @@
 
 ## Répertoire "data"
 - Il faut recréer l'aborescence s'il n'existe pas :
-
   ![](images/Data_tree.png)
   
 ## Fichier ".env"
