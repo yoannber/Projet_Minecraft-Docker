@@ -1,6 +1,6 @@
 # Minecraft : Version avec HAProxy et BungeeCord
 **Voici le schéma correspondant :**
-<img aligne="center" src="images/HAProxy-BungeeCord.png" alt="" title="" width="654" height="511" />
+<img align="center" src="images/HAProxy-BungeeCord.png" alt="" title="" width="654" height="511" />
 
 ## Commandes
 - make (pour build)
