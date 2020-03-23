@@ -1,5 +1,5 @@
 # Projet Minecraft
-Deux versions sont disponibles :
+**Deux versions sont disponibles :**
 - Une avec uniquement HAProxy
 - L'autre avec HAProxy + BungeeCord
 
