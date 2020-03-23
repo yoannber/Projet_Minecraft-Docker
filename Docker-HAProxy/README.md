@@ -1,5 +1,5 @@
 # Minecraft
-**Version full HAProxy**
+  **Version full HAProxy**
 
 ## Commandes
 - make (pour build)
