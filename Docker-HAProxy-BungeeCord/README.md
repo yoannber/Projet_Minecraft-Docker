@@ -1,4 +1,4 @@
-# Minecraft : Version avec HAProxy et BungeeCord
+# Minecraft : version avec HAProxy et BungeeCord
 **Voici le schéma correspondant :**
 <p align="center"> <img src="images/HAProxy-BungeeCord.png" alt="" title="" width="654" height="511" /> </p>
 
