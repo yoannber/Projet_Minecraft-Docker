@@ -5,6 +5,7 @@
 ## Commandes
 - make (pour build)
 - make clean (pour destroy)
+- make install (pour installer Docker et docker-compose)
 
 ## Répertoire "data"
 - Il faut recréer l'aborescence s'il n'existe pas :
