@@ -1,5 +1,7 @@
 # Minecraft : Version avec HAProxy et BungeeCord
 
+![](images/HAProxy-BungeeCord.png)
+
 ## Commandes
 - make (pour build)
 - make clean (pour destroy)
