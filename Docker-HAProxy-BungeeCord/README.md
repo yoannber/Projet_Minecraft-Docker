@@ -8,7 +8,9 @@
 
 ## Répertoire "data"
 - Il faut recréer l'aborescence s'il n'existe pas :
-![](images/Data_tree.png)
+
+  ![](images/Data_tree.png)
+  
 ## Fichier ".env"
 - Il faut recréer le fichier ".env" qui embarque les addresses IP des conteneurs Docker et les infos du S3 s'il n'existe pas. Par exemple :
 ```
