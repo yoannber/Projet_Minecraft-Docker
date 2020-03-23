@@ -1,5 +1,5 @@
 # Minecraft
-- Ajout du backup du répertoire "data" toutes les heures vers un bucket S3 AWS
+Version full HAProxy
 
 ## Commandes
 - make (pour build)
