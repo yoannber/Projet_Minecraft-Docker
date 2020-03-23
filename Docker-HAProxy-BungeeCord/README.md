@@ -7,10 +7,10 @@
 - make clean (pour destroy)
 
 ## Répertoire "data"
-- Il faut recréer l'aborescence :
+- Il faut recréer l'aborescence s'il n'existe pas :
 
 ## Fichier ".env"
-- Il faut recréer le fichier ".env" qui embarque les addresses IP des conteneurs Docker et les infos du S3. Par exemple :
+- Il faut recréer le fichier ".env" qui embarque les addresses IP des conteneurs Docker et les infos du S3 s'il n'existe pas. Par exemple :
 ```
 PROJECT_NAME=Projet_de_ouf
 NETWORK_SUBNET=192.168.1.0/24
