@@ -1,0 +1,25 @@
+.box {
+  display: inline-block;
+}
+
+.progress {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent !important;
+  height: 200px !important;
+  width: 200px !important;
+
+}
+
+.progress > .inner {
+  position: absolute;
+  color: #00CFD4;
+  font-size: 50px;  
+}
+
+.progress > svg {
+  height: 100%;
+  display: block;
+}

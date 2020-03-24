@@ -19,6 +19,7 @@ services:
             - ./data/worlds/world_nether_1:/world_nether/
             - ./data/worlds/world_the_end_1:/world_the_end/
             - ./data/plugins/plugins_1:/plugins/
+            - ./data/logs:/logs/
 
     minecraft_2:
         build: ./Dockerfile
@@ -82,6 +83,8 @@ services:
         depends_on:
             - minecraft_1
             - minecraft_2
+        volumes:
+            - ./data/logs:/logsmine
         restart: always
 
     dockercraft:
