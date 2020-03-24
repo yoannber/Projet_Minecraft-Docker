@@ -1,5 +1,5 @@
 <?php
-	$server = getenv('MINECRAFT_1_IP');
+	$server = getenv('MINECRAFT_2_IP');
 	$port = 25562;
 	$password = '2442';
 
