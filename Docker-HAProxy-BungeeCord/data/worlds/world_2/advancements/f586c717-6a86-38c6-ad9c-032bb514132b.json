@@ -74,6 +74,7 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:jungle_edge": "2020-03-24 20:17:32 +0000",
       "minecraft:mountains": "2020-03-23 09:21:24 +0000",
       "minecraft:forest": "2020-03-23 17:10:00 +0000",
       "minecraft:taiga": "2020-03-23 09:37:59 +0000",
@@ -83,6 +84,7 @@
       "minecraft:river": "2020-03-23 09:56:54 +0000",
       "minecraft:wooded_mountains": "2020-03-23 09:22:54 +0000",
       "minecraft:wooded_hills": "2020-03-23 17:10:41 +0000",
+      "minecraft:swamp": "2020-03-24 20:17:47 +0000",
       "minecraft:plains": "2020-03-23 09:56:55 +0000"
     },
     "done": false
