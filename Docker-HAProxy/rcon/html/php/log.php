@@ -3,9 +3,6 @@
 	  $log = file_get_contents('/logsmine/latest.log');    // distant/local
 	  $log = explode("\n", $log);
 
-    
-
-
           foreach ($log as $l) {
           $ok = false;
           $l = htmlspecialchars($l);
