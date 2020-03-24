@@ -1,0 +1,208 @@
+[10:53:50] [Server thread/INFO]: Starting minecraft server version 1.15.2
+[10:53:50] [Server thread/INFO]: Loading properties
+[10:53:50] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-800b93f-8160e29 (MC: 1.15.2) (Implementing API version 1.15.2-R0.1-SNAPSHOT)
+[10:53:50] [Server thread/INFO]: Debug logging is disabled
+[10:53:50] [Server thread/INFO]: Using 4 threads for Netty based IO
+[10:53:50] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[10:53:50] [Server thread/INFO]: Default game type: SURVIVAL
+[10:53:50] [Server thread/INFO]: Generating keypair
+[10:53:51] [Server thread/INFO]: Starting Minecraft server on *:25566
+[10:53:52] [Server thread/INFO]: Using epoll channel type
+[10:54:12] [Server thread/WARN]: Plugin dynmap v3.0-beta-10-257 does not specify an api-version.
+[10:54:12] [Server thread/INFO]: [dynmap] Loading dynmap v3.0-beta-10-257
+[10:54:12] [Server thread/INFO]: [dynmap] version=git-Spigot-800b93f-8160e29 (MC: 1.15.2)
+[10:54:13] [Server thread/INFO]: [dynmap] Unload queue not found - default to unload all chunks
+[10:54:13] [Server thread/INFO]: [dynmap] inhabitedTicks field not found - inhabited shader not functional
+[10:54:13] [Server thread/INFO]: [dynmap] Mod Support API available
+[10:54:13] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[10:54:13] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[10:54:13] [Server thread/WARN]: Whilst this makes it possible to use BungeeCord, unless access to your server is properly restricted, it also opens up the ability for hackers to connect with any username they choose.
+[10:54:13] [Server thread/WARN]: Please see http://www.spigotmc.org/wiki/firewall-guide/ for further information.
+[10:54:13] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[10:54:13] [Server thread/INFO]: Preparing level "world"
+[10:54:14] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[10:54:52] [Server thread/INFO]: Loaded 6 recipes
+[10:54:52] [Server thread/INFO]: -------- World Settings For [world] --------
+[10:54:52] [Server thread/INFO]: Experience Merge Radius: 3.0
+[10:54:52] [Server thread/INFO]: Mob Spawn Range: 6
+[10:54:52] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Cane Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Melon Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Potato Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Vine Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[10:54:52] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[10:54:52] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[10:54:52] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[10:54:52] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[10:54:52] [Server thread/INFO]: Max TNT Explosions: 100
+[10:54:52] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[10:54:52] [Server thread/INFO]: View Distance: 10
+[10:54:52] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[10:54:52] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[10:54:52] [Server thread/INFO]: Item Despawn Rate: 6000
+[10:54:52] [Server thread/INFO]: Item Merge Radius: 2.5
+[10:54:52] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[10:54:52] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[10:54:53] [Server thread/INFO]: -------- World Settings For [world_nether] --------
+[10:54:53] [Server thread/INFO]: Experience Merge Radius: 3.0
+[10:54:53] [Server thread/INFO]: Mob Spawn Range: 6
+[10:54:53] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Cane Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Melon Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Potato Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Vine Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[10:54:53] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[10:54:53] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[10:54:53] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[10:54:53] [Server thread/INFO]: Max TNT Explosions: 100
+[10:54:53] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[10:54:53] [Server thread/INFO]: View Distance: 10
+[10:54:53] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[10:54:53] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[10:54:53] [Server thread/INFO]: Item Despawn Rate: 6000
+[10:54:53] [Server thread/INFO]: Item Merge Radius: 2.5
+[10:54:53] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[10:54:53] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[10:54:53] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
+[10:54:53] [Server thread/INFO]: Experience Merge Radius: 3.0
+[10:54:53] [Server thread/INFO]: Mob Spawn Range: 6
+[10:54:53] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Cane Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Melon Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Potato Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Vine Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[10:54:53] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[10:54:53] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[10:54:53] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[10:54:53] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[10:54:53] [Server thread/INFO]: Max TNT Explosions: 100
+[10:54:53] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[10:54:53] [Server thread/INFO]: View Distance: 10
+[10:54:53] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[10:54:53] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[10:54:53] [Server thread/INFO]: Item Despawn Rate: 6000
+[10:54:53] [Server thread/INFO]: Item Merge Radius: 2.5
+[10:54:53] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[10:54:53] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[10:54:53] [Server thread/INFO]: Preparing start region for dimension 'world'/minecraft:overworld
+[10:54:55] [Server thread/INFO]: Preparing spawn area: 0%
+[10:54:55] [Server thread/INFO]: Preparing spawn area: 0%
+[10:54:55] [Server thread/INFO]: Preparing spawn area: 0%
+[10:54:55] [Server thread/INFO]: Preparing spawn area: 0%
+[10:54:55] [Server thread/INFO]: Preparing spawn area: 0%
+[10:54:58] [Server-Worker-2/INFO]: Preparing spawn area: 16%
+[10:54:58] [Server thread/INFO]: Preparing spawn area: 16%
+[10:54:58] [Server thread/INFO]: Preparing spawn area: 16%
+[10:54:58] [Server thread/INFO]: Preparing spawn area: 16%
+[10:54:58] [Server thread/INFO]: Preparing spawn area: 16%
+[10:54:58] [Server thread/INFO]: Preparing spawn area: 16%
+[10:54:58] [Server-Worker-2/INFO]: Preparing spawn area: 96%
+[10:54:59] [Server-Worker-2/INFO]: Preparing spawn area: 99%
+[10:55:00] [Server thread/INFO]: Time elapsed: 6863 ms
+[10:55:00] [Server thread/INFO]: Preparing start region for dimension 'world_nether'/minecraft:the_nether
+[10:55:01] [Server thread/INFO]: Preparing spawn area: 0%
+[10:55:01] [Server thread/INFO]: Preparing spawn area: 0%
+[10:55:01] [Server thread/INFO]: Preparing spawn area: 0%
+[10:55:01] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[10:55:02] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[10:55:02] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[10:55:03] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[10:55:03] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[10:55:04] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[10:55:04] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[10:55:05] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[10:55:05] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[10:55:06] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[10:55:06] [Server-Worker-2/INFO]: Preparing spawn area: 87%
+[10:55:06] [Server thread/INFO]: Time elapsed: 6676 ms
+[10:55:06] [Server thread/INFO]: Preparing start region for dimension 'world_the_end'/minecraft:the_end
+[10:55:07] [Server thread/INFO]: Preparing spawn area: 0%
+[10:55:07] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[10:55:07] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[10:55:08] [Server-Worker-2/INFO]: Preparing spawn area: 88%
+[10:55:08] [Server thread/INFO]: Time elapsed: 1761 ms
+[10:55:08] [Server thread/INFO]: [dynmap] Enabling dynmap v3.0-beta-10-257
+[10:55:08] [Server thread/INFO]: [dynmap] Using Bukkit Permissions (superperms) for access control
+[10:55:08] [Server thread/INFO]: [dynmap] Web interface permissions only available for online users
+[10:55:09] [Server thread/ERROR]: [dynmap] Error reading plugins/dynmap/markers.yml
+[10:55:09] [Server thread/INFO]: [dynmap] Extracted files upgraded
+[10:55:09] [Server thread/INFO]: [dynmap] Mod Support processing completed
+[10:55:10] [Server thread/INFO]: [dynmap] Loaded 25 shaders.
+[10:55:10] [Server thread/INFO]: [dynmap] Loaded 82 perspectives.
+[10:55:10] [Server thread/INFO]: [dynmap] Loaded 14 lightings.
+[10:55:11] [Server thread/INFO]: [dynmap] Web server started on address 0.0.0.0:8123
+[10:55:11] [Server thread/INFO]: [dynmap] version 3.0-beta-10-257 is enabled - core version 3.0-beta-10-257
+[10:55:11] [Server thread/INFO]: [dynmap] For support, visit https://forums.dynmap.us
+[10:55:11] [Server thread/INFO]: [dynmap] To report or track bugs, visit https://github.com/webbukkit/dynmap/issues
+[10:55:11] [Server thread/INFO]: [dynmap] Loaded 3 maps of world 'world'.
+[10:55:11] [Server thread/INFO]: [dynmap] Loaded 2 maps of world 'world_nether'.
+[10:55:11] [Server thread/INFO]: [dynmap] Loaded 2 maps of world 'world_the_end'.
+[10:55:11] [Server thread/INFO]: [dynmap] Enabled
+[10:55:11] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[10:55:11] [Server thread/INFO]: Done (57.265s)! For help, type "help"
+[10:55:11] [Server thread/INFO]: Starting GS4 status listener
+[10:55:11] [Server thread/INFO]: Starting remote control listener
+[10:55:11] [Query Listener #1/INFO]: Query running on 0.0.0.0:25566
+[10:55:11] [RCON Listener #2/INFO]: RCON running on 0.0.0.0:25562
+[10:55:11] [User Authenticator #2/INFO]: UUID of player Zenibaa is 310591f2-d190-3403-8297-676793584941
+[10:55:11] [User Authenticator #1/INFO]: UUID of player Zenibaa is 310591f2-d190-3403-8297-676793584941
+[10:55:11] [Server thread/INFO]: com.mojang.authlib.GameProfile@7ce1f257[id=310591f2-d190-3403-8297-676793584941,name=Zenibaa,properties={},legacy=false] (/192.168.2.30:41581) lost connection: Disconnected
+[10:55:11] [Server thread/INFO]: com.mojang.authlib.GameProfile@1a00e69b[id=310591f2-d190-3403-8297-676793584941,name=Zenibaa,properties={},legacy=false] (/192.168.2.30:46763) lost connection: Disconnected
+[10:55:13] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:55:18] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:55:22] [User Authenticator #3/INFO]: UUID of player Zenibaa is 310591f2-d190-3403-8297-676793584941
+[10:55:23] [Server thread/INFO]: Zenibaa[/192.168.2.30:38117] logged in with entity id 255 at ([world]8.14327322700851, 93.73669882440481, -341.6463237465498)
+[10:55:23] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:55:28] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:55:33] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:55:39] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:55:44] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:55:49] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:55:54] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:55:59] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:56:04] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:56:09] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:56:14] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:56:16] [Dynmap Render Thread/INFO]: [dynmap] Loading default resource pack
+[10:56:19] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:56:24] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:56:27] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:56:29] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:56:34] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:56:39] [RCON Listener #2/INFO]: Rcon connection from: /192.168.2.50
+[10:56:51] [Server thread/INFO]: Zenibaa lost connection: Disconnected
+[10:56:51] [Server thread/INFO]: Zenibaa left the game

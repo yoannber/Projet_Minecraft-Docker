@@ -1,6 +1,14 @@
 {
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_by_something": "2020-03-23 17:03:56 +0000"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:mountains": "2020-03-23 17:06:43 +0000",
+      "minecraft:river": "2020-03-23 17:14:21 +0000",
       "minecraft:plains": "2020-03-23 09:38:43 +0000"
     },
     "done": false

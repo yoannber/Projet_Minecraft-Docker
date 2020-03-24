@@ -44,6 +44,8 @@ network_compression_threshold: 256
 groups:
   zfielicious:
   - admin
+  yoann:
+  - admin
   md_5:
   - admin
 connection_throttle: 4000

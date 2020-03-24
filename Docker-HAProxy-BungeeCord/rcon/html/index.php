@@ -1,231 +1,230 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Y.T.P.A</title>
+  <link rel="stylesheet" type="text/css" href="./css/index.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="./css/chart.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="./css/animateTextfield.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" media="all" />
+  <link rel="shortcut icon" href="./image/minecraft.ico">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="./js/jquery.inputhistory.js"></script>
+</head>
+<body>
+
+<?php require_once('./php/serverQueryConnexion.php');?>
+
 <?php
-        use xPaw\MinecraftPing;
-        use xPaw\MinecraftPingException;
-
-	// $project_name = getenv('PROJECT_NAME');
-	// $app_name = $project_name."_Minecraft_1";
-
-        // Edit this ->
-        define( 'MQ_SERVER_ADDR', getenv('MINECRAFT_1_IP') );
-        define( 'MQ_SERVER_PORT', 25566 );
-        define( 'MQ_TIMEOUT', 1 );
-        // Edit this <-
-
-        // Display everything in browser, because some people can't look in logs for errors
-        Error_Reporting( E_ALL | E_STRICT );
-        Ini_Set( 'display_errors', true );
-
-        require __DIR__ . '/src/MinecraftPing.php';
-        require __DIR__ . '/src/MinecraftPingException.php';
-
-        $Timer = MicroTime( true );
-
-        $Info = false;
-        $Query = null;
-
-        try
-        {
-                $Query = new MinecraftPing( MQ_SERVER_ADDR, MQ_SERVER_PORT, MQ_TIMEOUT );
-
-                $Info = $Query->Query( );
-
-                if( $Info === false )
-                {
-                        /*
-                         * If this server is older than 1.7, we can try querying it again using older protocol
-                         * This function returns data in a different format, you will have to manually map
-                         * things yourself if you want to match 1.7's output
-                         *
-                         * If you know for sure that this server is using an older version,
-                         * you then can directly call QueryOldPre17 and avoid Query() and then reconnection part
-                         */
-
-                        $Query->Close( );
-                        $Query->Connect( );
-
-                        $Info = $Query->QueryOldPre17( );
-                }
-        }
-        catch( MinecraftPingException $e )
-        {
-                $Exception = $e;
-        }
-
-        if( $Query !== null )
-        {
-                $Query->Close( );
-        }
-
-        $Timer = Number_Format( MicroTime( true ) - $Timer, 4, '.', '' );
+	require './php/rcon.php';
+	require './php/minecraft_string.php';
+  require './php/rconRequestConnexion.php';
 ?>
 
 
-<!DOCTYPE HTML>
-
-<html>
-
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Minecraft Console RCON </title>
-
-	<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
-	<!--<script src="//code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
-
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-	<!-- Latest darkly bootstrap theme CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/darkly/bootstrap.min.css" integrity="sha384-w+8Gqjk9Cuo6XH9HKHG5t5I1VR4YBNdPt/29vwgfZR485eoEJZ8rJRbm3TR32P6k" crossorigin="anonymous">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-	<script type="text/JavaScript" src="script.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
 
 
-<body>
-	<!-- Stack the columns on mobile by making one full-width and the other half-width -->
-	<div class="container-fluid content" style="padding-top: 15px;">
-    <div class="alert alert-info text-center" id="alertMessenge">Bienvenue sur la Console RCON wola.</div>
-		<div class="row">
-			<div class="col-md-8 col-lg-8 console">
-				<div class="card mb-3">
-					<div class="card-header bg-warning">
-						<h3>Console</h3>
-					</div>
-					<div class="card-body bg-white">
-						<ul class="list-group" id="groupConsole">
-							<li class="list-group-item list-group-item-warning">Bienvenue sur la Console RCON.</li>
-							<li class="list-group-item list-group-item-warning">La liste de toutes les commandes par ici : <a href="http://minecraft.gamepedia.com/Commands" target="_blank">http://minecraft.gamepedia.com/Commands</a></li>
-							<li class="list-group-item list-group-item-warning">La liste de tous les noms & id des items par là : <a href="http://www.minecraftinfo.com/idlist.htm" target="_blank">http://www.minecraftinfo.com/idlist.htm</a></li>
-						</ul>
+<div class="container-pad">
 
-					</div>
-				</div>
+ <div class="container-headPad">
+   <div id="minecraft-message" >
+     <h1><span><img id="pickaxe" src="./image/pickaxe.png">PANNEAUX D'ADMINISTRATION</span></h1>
+   </div>
+ </div>
 
-				<div class="checkbox card card-body bg-white mb-3">
-					<div class="row align-items-center">
-						<div class="col-6">
-							<label class="text-dark btn mb-0">
-								<input type="checkbox" id="chkAutoScroll" checked="true"> Scroll Automatique
-							</label>
-						</div>
-						<div class="col-6">
-							<button type="button" class="btn btn-primary" tabindex="0" id="btnClearLog" style="float:right;"><span class="glyphicon glyphicon-remove-sign"></span> Nettoyer la console</button>
-						</div>
-					</div>
-				</div>
+ <div class="container-backPad">
+   <img id="pickaxe" src="./image/textMinecraft.png">
+ </div>
 
-				<div class="input-group">
-					<input type="text" class="form-control" id="txtCommand">
-					<div class="input-group-append">
-						<button type="button" class="btn btn-primary" tabindex="-1" id="btnSend"><span class="glyphicon glyphicon-arrow-right"></span> Envoyer</button>
-					</div>
-				</div>
-			</div>
+ <div class="container-descriptionPad">
+   <div class="title">
+     <h3><span><img src="./image/swordLeft.png">SUPERVISION DES SERVEURS MINECRAFT<img src="./image/sword.png"> </span></h3>
+   </div>
+   <div class="row align-items-start">
+     <div class="col">
+       <div class="container-icon">
+         <img id="icon" src="./image/terminal.svg">
+       </div>
+      <h2>Console de gestion</h2>
+      <p>Pour piloter votre serveur à distance, utilisez le service Remote.</p>
+      <button class="main-button"><span>PILOTER</span></button>
+     </div>
+     <div class="col">
+       <div class="container-icon">
+          <img id="icon" src="./image/avatar.svg">
+       </div>
+      <h2> Gestion des joueurs</h2>
+      <p>Gérez vos joueurs grâce à une interface d'administration dédié.</p>
+      <button class="main-button"><span>GÉRER</span></button>
+     </div>
+     <div class="col">
+       <div class="container-icon">
+         <img id="icon" src="./image/pie-chart.svg">
+       </div>
+        <h2>Statistiques du serveur</h2>
+        <p>Consultez en temps réel les statistiques de votre serveur.</p>
+        <button class="main-button"><span>CONSULTER</span></button>
+     </div>
+   </div>
+ </div>
+
+ <div class="container-carouselPad">
+    <div id="slide" class="carousel slide" data-ride="carousel">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#slide" data-slide-to="0" class="active"></li>
+        <li data-target="#slide" data-slide-to="1"></li>
+        <li data-target="#slide" data-slide-to="2"></li>
+      </ul>
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container-carrousel">
+                <p>SALUT</P>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container-carrousel">
+                <p>SALUT</P>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container-carrousel">
+                <p>SALUT</P>
+          </div>
+        </div>
+      </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#slide" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#slide" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+</div>
+
+<div class="container-informationPad">
+  <div class="row">
+    <div class="col-7 m1">
+      <div class="card">
+      <div class="card-header">
+        <p>Informations du serveur</p>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4 m1">
+            <div class="box">
+              <div class="progress" id="progress">
+                <div class="inner" id="players">
+                  <?php echo $info['numplayers'],"/",$info['maxplayers'] ?>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-8 m2">
+            <h1>DESCRIPTION : <span class="value"><?php echo $info['hostname'] ?></span></h1>
+            <h1>ADRESSE : <span class="value"><?php echo $info['hostip'] ?></span></h1>
+            <h1>VERSION : <span class="value"><?php echo $info['version'] ?></span></h1>
+            <h1>MAP : <span class="value"><?php echo $info['map'] ?></span></h1>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-5 m2">
+
+      <div class="card">
+      <div class="card-header">
+        <p>Joueurs connectés</p>
+      </div>
+
+      <div class="card-body" id="tablePlayers" >
+        <?php require('./php/tablePlayers.php'); ?>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="container-informationPad">
+  <div class="row">
+    <div class="col-5 m1" >
+      <div class="card">
+      <div class="card-header">
+        <p>Console RCON</p>
+      </div>
+      <div class="card-body">
+        <div class="rcon">
+          <div id="console">
+            <?php echo $return ?>
+          </div>
+        </div>
+        <div class="input-field">
+          <input type="text" id="name" required />
+          <label for="name">Commande :</label>
+        </div>
+        </div>
+        <div>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-7 m2">
+      <div class="card">
+      <div class="card-header ">
+          <p id="textRefresh">Log & Chat du serveur<span><div class="refresh"></div></span></p>
+      </div>
+      <div class="card-body">
+        <div class="log" id="log">
+          <?php require('./php/log.php'); ?>
+        </div>
+      </div>
+    </div>
+</div>
+
+</div>
+</div>
 
 
-			<div class="col-md-4 col-lg-4 status">
-				<div class="card mb-3 h-100">
-					<div class="card-header bg-warning">
-						<h3>Statut du serveur & infos</h3>
-					</div>
-					<div class="card-body">
-						<div class="container">
-							<?php if( isset( $Exception ) ): ?>
-                						<div class="panel panel-primary">
-					                        	<div class="panel-heading"><?php echo htmlspecialchars( $Exception->getMessage( ) ); ?></div>
-						                        <div class="panel-body"><?php echo nl2br( $e->getTraceAsString(), false ); ?></div>
-               							</div>
-							<?php else: ?>
-          							<div class="row">
-                                					<table class="table table-bordered table-striped">
-                                        				<thead>
-                                                				<tr>
-				                                                        <th colspan="2">Information du serveur <em>(Temps de la requête : <?php echo $Timer; ?>s)</em></th>
-                                				                </tr>
-                                       					</thead>
-                                       					 <tbody>
-									  <?php if( $Info !== false ): ?>
-										<?php foreach( $Info as $InfoKey => $InfoValue ): ?>
-                                                					<tr>
-	                                                        			<td><?php echo htmlspecialchars( $InfoKey ); ?></td>
-        	                                                			<td><?php
-											if( $InfoKey === 'favicon' )
-        										{
-											   echo '<img width="64" height="64" src="' . Str_Replace( "\n", "", $InfoValue ) . '">';
-											}
-											else if( Is_Array( $InfoValue ) )
-											{
 
-												echo "<pre>";
-												if (isset($InfoValue['max']) || isset($InfoValue['online']) || isset($InfoValue['sample']) )
-												{
 
-													echo "Nombre de joueurs connectés: " ;
-													echo $InfoValue['online'];
-													echo "/";
-													echo $InfoValue['max'];
-													echo "\n";
-													echo "Joueur(s) connecté(s): \n";
-													if (isset($InfoValue['sample']))
-													{
-													foreach($InfoValue['sample'] as $value)
-													{
-														echo $value['name'];
-														echo "\n";
-													}
-													}
-												}
-												else if (isset($InfoValue['text']))
-												{
-													echo $InfoValue['text'];
-												}
-												else if (isset($InfoValue['name']))
-												{
-													echo "Version : ";
-													echo $InfoValue['name'];
-												}
-												else
-												{
-                          echo implode(" ",$InfoValue);
-													print_r( $InfoValue );
-												}
-									        	        echo "</pre>";
-	        									}
-        										else
-        										{
-										                echo htmlspecialchars( $InfoValue );
-        										}
-										  	?></td>
-                                                				    </tr>
-										<?php endforeach; ?>
-									<?php else: ?>
-                                                			<tr>
-                                                        			<td colspan="2">No information received</td>
-                                                			</tr>
-									<?php endif; ?>
-                                        			        </tbody>
-                                					</table>
-                						</div>
-							<?php endif; ?>
-        					</div>
-					</div>
-					<div class="card-footer bg-warning">
-						<p class="mb-0">Minecraft Console RCON </p>
-					</div>
-				</div>
+  <!-- Le reste du contenu -->
+  <!-- Javascript files -->
+  <script>
+    $('input').focus().inputHistory(function(value) {
+      $('#console').html($('#console').html() + '<br><strong>&gt; ' + value + '</strong>');
+      $.get('?rcon=' + encodeURIComponent(value), function(data){$('#console').html($('#console').html() + '<br>' + data).animate({ scrollTop: $('#console')[0].scrollHeight}, 800); });
+    });
+  </script>
 
-			</div>
-		</div>
-	</div>
+<script type="text/javascript">
+
+var auto_refresh = setInterval(
+function ()
+{
+$('#log').load('./php/log.php').fadeIn("slow");
+
+}, 1000);
+
+var auto_refresh2 = setInterval(
+function ()
+{
+ $('#tablePlayers').load('./php/tablePlayers.php').fadeIn("slow");
+
+}, 5000);
+
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./js/chart.js"></script>
 </body>
-<footer id = "footer">
-	<div class="container-fluid">
-	</div>
-</footer>
 </html>
