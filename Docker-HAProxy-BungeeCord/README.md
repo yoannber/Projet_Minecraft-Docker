@@ -8,7 +8,7 @@
 - make install (pour installer Docker et docker-compose)
 
 ## Répertoire "data"
-- Il faut recréer l'aborescence s'il n'existe pas :
+- Il faut recréer l'aborescence si elle n'existe pas :
 
   ![](images/Data_tree.png)
   
