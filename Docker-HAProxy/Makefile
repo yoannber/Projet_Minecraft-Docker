@@ -5,7 +5,7 @@ export SERVER_HOSTNAME=$(shell hostname -I | cut -f1 -d' ')
 
 default: serve
 
-ip: 
+ip:
 	@echo "-----------------------------------"
 	@echo "Server Hostname: $(SERVER_HOSTNAME)"
 	@echo "-----------------------------------"
@@ -16,7 +16,10 @@ serve:	ip
 clean:
 	docker-compose down
 
-install: docker.install docker-compose.install
+restore:
+	./restore.sh
+
+install: docker.install docker-compose.install aws-cli
 
 docker.install:
 	wget -qO- https://get.docker.com/ | sh
@@ -26,3 +29,9 @@ docker-compose.install:
 	sudo chmod +x /usr/local/bin/docker-compose
 	docker-compose version
 
+aws-cli:
+	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+	unzip awscliv2.zip
+	sudo ./aws/install
+	rm -rf ./aws awscliv2.zip
+	aws --version
