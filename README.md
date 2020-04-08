@@ -4,13 +4,13 @@
 - L'autre avec HAProxy + BungeeCord
 
 ## Prérequis
-- Linux
-- Makefile
-- Docker
-- Docker-compose
-- AWS-CLI
-- Git
-- Client Minecraft (version 1.15.2 pour le jeu et inférieure à 1.12.2 pour Dockercraft) si on désire jouer
+- *Linux*
+- *Makefile*
+- *Docker*
+- *Docker-compose*
+- *AWS Command Line Interface*
+- *Git*
+- *Client Minecraft* (version 1.15.2 pour le jeu et inférieure à 1.12.2 pour Dockercraft) si on désire jouer
 
 ## Pourquoi deux versions ?
 La version HAProxy embarque la fonctionnalité qui permet au jeu de fonctionner en haute dispo. Cependant, HAProxy n'est pas fait pour permettre une haute dispo native du jeu Minecraft (déconnexion des joueurs si le serveur principal venait à planter et un délai trop long pour basculer vers le second serveur Minecraft et revenir vers le serveur principal).
