@@ -5,7 +5,8 @@
 ## Commandes
 - make (pour build)
 - make clean (pour destroy)
-- make install (pour installer Docker et docker-compose)
+- make install (pour installer Docker, docker-compose et awscli)
+- make restore (pour restaurer le dernier backup en date)
 
 ## Répertoire "data"
 - Il faut recréer l'aborescence si elle n'existe pas :
@@ -26,6 +27,6 @@ AWS_ACCESS_KEY_ID=SOME8AWS3ACCESS9KEY
 AWS_SECRET_ACCESS_KEY=sUp3rS3cr3tK3y0fgr34ts3cr3cy
 S3_BUCKET_URL=s3://bucket-fml/
 AWS_DEFAULT_REGION=eu-west-3
-CRON_SCHEDULE=0 * * * * #toutes les heures
+CRON_SCHEDULE=0 * * * *
 BACKUP_NAME=Backup_worlds_and_plugins
 ```
